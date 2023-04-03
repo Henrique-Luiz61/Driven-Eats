@@ -3,7 +3,8 @@ let bebida = '';
 let sobremesa = '';
 
 function finalizaPedido() {
-    window.open("https://wa.me/+5532999765201?text=");
+    let mensagem = "Olá, gostaria de fazer o pedido: - Prato: " + comida + "- Bebida: " + bebida + "- Sobremesa: " + sobremesa + "Total: " + preco;
+    window.open("https://wa.me/+5532999765201?text=" + mensagem);
 }
 
 function verificaSelecao() {
@@ -13,6 +14,7 @@ function verificaSelecao() {
                 const botaoContinuar = document.querySelector('.buttom');
                 console.log(botaoContinuar);
                 botaoContinuar.classList.add('avancar');
+                botaoContinuar.textContent = "Fechar pedido";
             }
         }
     }
